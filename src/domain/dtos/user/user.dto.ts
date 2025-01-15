@@ -14,7 +14,7 @@ export class CreateUserDTO {
         const { name, email, password, role } = object;
 
         // Validación del nombre
-        if (!name) return ['El nombre no existe ☠️', undefined];
+        if (!name) return ['El nombre no existe 💊', undefined];
         if (typeof name !== 'string') return ['El nombre debe ser un string', undefined];
         if (name.length <= 5) return ['El nombre debe tener más de 5 caracteres', undefined];
 
@@ -24,11 +24,11 @@ export class CreateUserDTO {
         // if (!validator.isEmail(email)) return ['El correo electrónico no tiene un formato válido', undefined];
 
         // Validación del password
-        if (!password) return ['El nombre no existe ☠️', undefined];
+        if (!password) return ['El password no existe 💊', undefined];
         if (password.length <= 5) return ['El password debe tener más de 5 caracteres', undefined];
 
         // Validación del password
-        if (!role) return ['El nombre no existe ☠️', undefined];
+        if (!role) return ['El rol no existe 💊', undefined];
         if (role.length <= 5) return ['El nombre debe tener más de 5 caracteres', undefined];
 
         // Si todas las validaciones pasaron, retornamos el DTO creado

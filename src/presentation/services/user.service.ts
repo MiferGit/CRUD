@@ -13,8 +13,9 @@ export class UserService {
                 status: Status.AVAILABLE
             }
            }) 
+           return user;
         } catch (error) {
-            throw CustomError.internalServer('Error obteniendo datos de usuarios');
+            throw CustomError.internalServer('Error obteniendo datos de usuarios 💊');
         }
     }
 
@@ -27,7 +28,7 @@ export class UserService {
         });   
 
         if (!user) {
-            throw CustomError.notFoud('Error usuario no encontrado');
+            throw CustomError.notFoud('Error usuario no encontrado 💊');
         } 
         return user;
     }
@@ -42,14 +43,14 @@ export class UserService {
         try {
             return await user.save(); 
         } catch (error) {
-            throw CustomError.internalServer('Error en la creación de usuario ☠️❌');
+            throw CustomError.internalServer('Error en la creación de usuario 💊❌');
         }
     }
 
     async updateUser(id: string, userData: UpdateUserDTO) { 
         const user = await this.findOneUser(id);
         if (!user) {
-            throw CustomError.notFoud('Error usuario no encontrado');
+            throw CustomError.notFoud('Error usuario no encontrado 💊');
         }
 
         user.name = userData.name.toLowerCase().trim(); 
@@ -62,7 +63,7 @@ export class UserService {
 
              } 
         } catch (error) {
-            throw CustomError.internalServer('Error al actualizar usuario');
+            throw CustomError.internalServer('Error al actualizar usuario 💊');
         }
     }
 

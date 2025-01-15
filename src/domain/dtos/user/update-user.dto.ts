@@ -14,7 +14,7 @@ export class UpdateUserDTO {
             
 
             if(!name) return ['El nombre no existe']
-            if(name.length <= 10) return ['El nombre debe tener mas de 2 caracteres']
+            if(name.length <= 3) return ['El nombre debe tener mas de 3 caracteres']
             if(typeof name !== 'string') return ['El nombre debe ser un string']
 
             if(!email) return ['El correo no existe']
